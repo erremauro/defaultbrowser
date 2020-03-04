@@ -44,10 +44,15 @@ func Main(cmdParseResult: CommandLineParseResult) throws {
             var scriptFilter = JSONScriptFilter()
             for key in HTTPHandlers.available.keys.sorted() {
                 let browser = HTTPHandlers.available[key]!
+
                 scriptFilter.items.append(
                     JSONScriptFilterItem(
-                        title: browser.title,
-                        subtitle: "Action this item to set this browser as the default",
+                        title: HTTPHandlers.current != browser
+                            ? browser.title
+                            : "\(browser.title) (Current)",
+                        subtitle: HTTPHandlers.current != browser
+                            ? "Action this item to set this browser as the default"
+                            : "This item is currently the default browser",
                         arg: browser.name,
                         icon: browser.icon,
                         valid: HTTPHandlers.current != browser
