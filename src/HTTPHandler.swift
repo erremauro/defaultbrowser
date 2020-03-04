@@ -36,4 +36,8 @@ struct HTTPHandler {
     static func == (lhs: HTTPHandler, rhs: HTTPHandler) -> Bool {
         return lhs.bundleId == rhs.bundleId
     }
+    
+    static func != (lhs: HTTPHandler, rhs: HTTPHandler) -> Bool {
+        return lhs.bundleId != rhs.bundleId
+    }
 }

@@ -49,7 +49,8 @@ func Main(cmdParseResult: CommandLineParseResult) throws {
                         title: browser.title,
                         subtitle: "Action this item to set this browser as the default",
                         arg: browser.name,
-                        icon: browser.icon
+                        icon: browser.icon,
+                        valid: HTTPHandlers.current != browser
                     )
                 )
             }
