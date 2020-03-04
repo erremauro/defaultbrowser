@@ -51,4 +51,4 @@ to change your default browser.
 [Alfred]: http://alfredapp.com
 [Script Filter]: https://www.alfredapp.com/help/workflows/inputs/script-filter/json/
 [defaultbrowser-alfred-workflow]: https://github.com/erremauro/defaultbrowser-alfred-workflow
-[MIT]: https://github.com/erremauro/blob/master/LICENSE
+[MIT]: https://github.com/erremauro/defaultbrowser/blob/master/LICENSE
