@@ -22,13 +22,15 @@ struct JSONScriptFilterItem : Codable {
     var subtitle: String
     var arg: String
     var icon: JSONScriptFilterItemIcon
+    var valid: Bool
     
-    init(title: String, subtitle: String, arg: String, icon: String) {
+    init(title: String, subtitle: String, arg: String, icon: String, valid: Bool = true) {
         self.uuid = UUID().uuidString
         self.title = title
         self.subtitle = subtitle
         self.arg = arg
         self.icon = JSONScriptFilterItemIcon(path: icon)
+        self.valid = valid
     }
 }
 
